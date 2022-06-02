@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4294F5CB-1AE4-43A7-A057-3F6185454848}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>phanmemcaphe</RootNamespace>
+    <AssemblyName>phanmemcaphe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\BanDAO.cs" />
+    <Compile Include="DAO\Data.cs" />
+    <Compile Include="DAO\HanghoaDAO.cs" />
+    <Compile Include="DAO\hoadonDAO.cs" />
+    <Compile Include="DAO\KhachhangDAO.cs" />
+    <Compile Include="DAO\LoaihanghoaDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\NhanvienDAO.cs" />
+    <Compile Include="DAO\TaikhoanDAO.cs" />
+    <Compile Include="DAO\thongTinHoaDonDAO.cs" />
+    <Compile Include="DTO\banDTO.cs" />
+    <Compile Include="DTO\hanghoaDTO.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\khachhangDTO.cs" />
+    <Compile Include="DTO\loaihanghoaDTO.cs" />
+    <Compile Include="DTO\menu.cs" />
+    <Compile Include="DTO\nhanvienDTO.cs" />
+    <Compile Include="DTO\taikhoanDTO.cs" />
+    <Compile Include="DTO\thongtinHD.cs" />
+    <Compile Include="Gui\chuyenban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\chuyenban.Designer.cs">
+      <DependentUpon>chuyenban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fBan.Designer.cs">
+      <DependentUpon>fBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fBanHang.Designer.cs">
+      <DependentUpon>fBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fDangNhap.Designer.cs">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fhanghoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fhanghoa.Designer.cs">
+      <DependentUpon>fhanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fLHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fLHH.Designer.cs">
+      <DependentUpon>fLHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fQLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fQLNV.Designer.cs">
+      <DependentUpon>fQLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\fThongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\fThongke.Designer.cs">
+      <DependentUpon>fThongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\gopban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\gopban.Designer.cs">
+      <DependentUpon>gopban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Gui\QLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\QLTK.Designer.cs">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Gui\chuyenban.resx">
+      <DependentUpon>chuyenban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fBan.resx">
+      <DependentUpon>fBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fBanHang.resx">
+      <DependentUpon>fBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fhanghoa.resx">
+      <DependentUpon>fhanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fLHH.resx">
+      <DependentUpon>fLHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fQLNV.resx">
+      <DependentUpon>fQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\fThongke.resx">
+      <DependentUpon>fThongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\gopban.resx">
+      <DependentUpon>gopban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Gui\QLTK.resx">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
